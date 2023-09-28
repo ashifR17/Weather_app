@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-color: #140e38;
+    color:white;
+}
+.Particle-Container{
+    z-index: -9;
+    position: absolute;
+    height: 100vh;
+}
+.main{
+    position: relative;
+    top: 70px;
+}
+.info{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    margin: 0px 10px 10px 10px;
+}
+.container{
+    z-index: 9;
+}
+header{
+    z-index: 9;
+    text-align: center;
+    background-color: purple;
+    padding: 10px;
+    margin-bottom: 20px;
+    position: fixed;
+    width: 100vw;
+}
+.heading{
+    text-align: center;
+    text-decoration: underline;
+    font-style: oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+.entries{
+    display: grid;
+    row-gap: 10px;
+    padding: 20px;
+    border: solid white 2px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.location{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+.location label,.selection label{
+    margin: 9px 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 600;
+}
+.lat,.lon,.sel{
+   display: flex;
+   margin-right: 20px;
+}
+input[type="text"],select{
+    padding: 10px 20px;
+    border: solid 3px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    box-shadow: 0px 2px 4px 0px black;
+    outline : 0px;
+}
+.selection{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+.btn{
+    margin:0px 20px;
+    padding: 10px;
+    background-color: #c2c2c2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: solid 2px grey;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0px 2px 4px 0px black;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.output-container{
+    margin: 10px;
+}
+.output{
+    padding: 20px;
+    border: solid white 2px;
+    border-radius: 10px;
+    display: none;
+    margin-top: 30px;
+}
+.output h1{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 20px;
+}
+.output h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+.output p{
+    text-align: center;
+    border : 2px solid whitesmoke;
+    padding: 20px;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width:750px) {
+    .lat,.lon,.sel{
+        display: grid;
+    }
+    .location label,.selection .sel label{
+        margin-bottom: 1px;
+    }
+    .btn{
+        height: 70%;
+        position: relative;
+        top:20px;
+    }
+}
+@media screen and (max-width:474px) {
+    .location,.selection{
+        display: grid;
+    }
+    .btn{
+        height: 100%;
+        width:30%;
+        position: relative;
+        top:10px;
+        margin: 0px auto;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="shortcut icon" href="icon.png">
+    <link rel="stylesheet" href="Weather.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="Particle-Container" id="particles-js" >
+        <!-- <script type="text/javascript" src="particles.js"></script> -->
+        <script type="text/javascript" src="app.js"></script>
+      </div>
+    <div class="container" id="container">
+    <header>
+    <h1 class="heading"><i class="fas fa-cloud-sun-rain"></i>Weather Forecast</h1>
+    </header>
+    <div class="main">
+    <div class="info">*Get Weather Forecast Of Next 16 Days ...</div>
+    <div class="entries">
+        <div class="location">
+            <div class="lat">
+            <label for="latitude">Enter Latitude</label>
+            <input type="text" name="latitude" id="latitude" placeholder="Enter Latitude Here">
+            </div>
+            <div class="lon">
+            <label for="longitude">Enter Longitude</label>
+            <input type="text" name="longitude" id="longitude" placeholder="Enter Longitude Here">
+            </div>
+        </div>
+        <div class="selection">
+        <div class="sel">
+        <label for="dropDown">Please Select An Option</label>
+        <select name="dropDown" id="dropDown">
+            <option value="">--Select the required Data--</option>
+            <option value="1">Maximum Temperature</option>
+            <option value="2">Minimum Temperature</option>
+            <option value="8">Average Pressure</option>
+            <option value="3">Dew point</option>
+            <option value="4">Moon Phase</option>
+            <option value="5">Snowfall</option>
+            <option value="6">Wind Speed And Direction</option>
+            <option value="7">Probibility Of Precipitation</option>
+            <option value="9">Average Cloud Coverage</option>
+            <option value="10">Visibility</option>
+        </select>
+       </div>
+        <button onclick="getRapid()" class="btn" id="btn">Go!!</button>
+       </div>
+    </div>
+    <div class="output-container">
+        <span id="output" class="output"></span>
+    </div>
+</div>
+</div>
+    <script type="text/javascript" src="Weather.js"></script>
+</body>
+</html>
